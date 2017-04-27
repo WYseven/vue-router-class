@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="doc">
     <div class="doc-nav">
       <ul class="main-menu">
         <li>
           <router-link to="/doc?install">安装</router-link>
         </li>
         <li>
-          <router-link :to="{path:'/doc',params: {id:'a'}}">介绍</router-link>
+          <router-link :to="{path:'/doc',query: {id:'a'}}">介绍</router-link>
         </li>
         <li>
           <router-link :to="{path:'/doc/base'}">基础</router-link>
@@ -39,11 +39,10 @@
       </ul>
     </div>
     <div class="doc-view">
-      hello
-      <p>{{ $route.query }}</p>
-      <p>{{ $route.params.block }}</p>
-      <p>{{ $route.params.hash }}</p>
-      <p>{{ $route.name }}</p>
+      <p>search值为：{{ $route.query }}</p>
+      <p>参数值：{{ $route.params.block }}</p>
+      <p>has值为：{{ $route.hash }}</p>
+      <p>路有名字：{{ $route.name }}</p>
     </div>
   </div>
 </template>

@@ -28,7 +28,8 @@ export default new Router({
         {
           path: '/project',
           name: 'Project',
-          component: Project
+          component: Project,
+          flag: '我的项目'
         },
         {
           path: '/doc/:block?',
