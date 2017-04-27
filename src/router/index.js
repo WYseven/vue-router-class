@@ -7,6 +7,8 @@ import Code from '@/views/code'
 
 import Layout from '@/views/layout'
 
+// 参考 https://www.easy-mock.com/
+
 Vue.use(Router)
 // 要注意，以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。
 
