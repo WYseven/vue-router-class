@@ -1,0 +1,45 @@
+
+.doc-nav {
+  position: absolute;
+  z-index: 10;
+  top: 61px;
+  left: 0;
+  bottom: 0;
+  padding: 40px 0 30px 60px;
+  width: 260px;
+  margin-right: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  border-right: 1px solid #11b95c;
+}
+
+.doc-nav .main-menu {
+  margin-bottom: 20px;
+  padding-left: 0;
+  line-height: 1.8em;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1em;
+}
+
+.main-menu ul span {
+  color: #7f8c8d;
+}
+
+
+.main-menu ul a {
+  font-weight: bold;
+}
+
+.doc-view {
+  position: relative;
+  padding: 2.2em 0;
+  margin-left: 290px;
+  max-width: 600px;
+
+}

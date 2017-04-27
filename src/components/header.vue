@@ -1,7 +1,7 @@
 <template>
   <ul class="el-menu menu-horizontal el-menu--horizontal el-menu--dark">
     <router-link to="/" class="el-menu-item logo" tag="li">
-      <img src="../assets/logo.png" style="width: 50px;">
+      <img src="../assets/miaov.png">
     </router-link>
     <router-link to="/project" class="el-menu-item" tag="li">
       <i class="fa fa-home"></i>

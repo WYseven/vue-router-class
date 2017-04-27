@@ -29,7 +29,7 @@ export default new Router({
           component: Project
         },
         {
-          path: '/doc',
+          path: '/doc/:block?',
           name: 'Doc',
           component: Doc
         },

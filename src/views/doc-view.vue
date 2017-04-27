@@ -1,14 +1,12 @@
 <template>
-  <div class="project">
-    <div class="block-content">
-        这是我的项目页面
-    </div>
+  <div>
+    hello
   </div>
 </template>
 
 <script>
   export default {
-    name: 'Project',
+    name: 'search',
     data () {
       return {}
     }

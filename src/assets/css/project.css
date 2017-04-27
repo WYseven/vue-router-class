@@ -1,3 +1,28 @@
 .project .fa {
 	margin-right: 10px;
 }
+
+.el-menu--horizontal .logo:hover {
+  border-bottom: none;
+}
+
+.el-menu--dark .logo {
+  border-bottom: none;
+}
+
+.el-menu--dark .logo img {
+  vertical-align: middle;
+}
+
+.block-content {
+  width:300px;
+  background: #324057;
+  border-radius: 5px;
+  height: 180px;
+  margin-top: 30px;
+  color: #fff;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+  line-height: 180px;
+}
