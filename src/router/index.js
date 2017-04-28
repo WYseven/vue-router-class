@@ -4,6 +4,7 @@ import Home from '@/components/home'
 import Project from '@/views/backend/project'
 import Doc from '@/views/backend/doc'
 import Code from '@/views/backend/code'
+import Login from '@/components/login'
 
 import Layout from '@/views/layout'
 
@@ -30,8 +31,10 @@ let router = new Router({
           path: '/project',
           name: 'Project',
           component: Project,
-          flag: '我的项目',
-          meta: { requiresAuth: true }
+          meta: { requiresAuth: true },
+          beforeEnter (to, from, next) {
+            next()
+          }
         },
         {
           path: '/doc/:block?',
@@ -48,6 +51,11 @@ let router = new Router({
       ]
     },
     {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
       path: '*',
       redirect: '/'
     }
@@ -56,7 +64,11 @@ let router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth) {
-    console.log(to, from)
+    /* router.push({
+      path: 'login'
+    })
+    */
+    next()
   } else {
     next()
   }

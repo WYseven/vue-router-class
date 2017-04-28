@@ -11,6 +11,13 @@
     name: 'Project',
     data () {
       return {}
+    },
+    beforeRouteEnter (to, from, next) {
+      next(vm => {
+        vm.$router.push({
+          path: '/login'
+        })
+      })
     }
   }
 </script>
