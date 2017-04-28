@@ -2,10 +2,9 @@
   <div>
     <header-nav></header-nav>
     <div class="breadcrumb">
-      <span>首页</span>
+      <a href="javascript:;" @click="goHomeHandle">首页</a>
       /
       <span>{{ flag }}</span>
-      <span>{{$route.flag}}</span>
     </div>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
@@ -23,7 +22,7 @@
   * */
 
   let flags = {
-    'project': '我的项目',
+    project: '我的项目',
     code: '工作台',
     doc: '文档'
   }
@@ -37,6 +36,14 @@
     name: 'search',
     components: {
       'header-nav': Header
+    },
+    methods: {
+      goHomeHandle () {
+        // this.$router.push('/')
+        // this.$router.push({path: '/'})
+        // 编程式导航
+        this.$router.push({name: 'Home'})
+      }
     },
     watch: {
       '$route' () {

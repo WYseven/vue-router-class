@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
-import Project from '@/views/project'
-import Doc from '@/views/doc'
-import Code from '@/views/code'
+import Project from '@/views/backend/project'
+import Doc from '@/views/backend/doc'
+import Code from '@/views/backend/code'
 
 import Layout from '@/views/layout'
 
@@ -12,7 +12,8 @@ import Layout from '@/views/layout'
 Vue.use(Router)
 // 要注意，以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。
 
-export default new Router({
+let router = new Router({
+  linkActiveClass: 'is-active',
   routes: [
     {
       path: '/',
@@ -29,17 +30,20 @@ export default new Router({
           path: '/project',
           name: 'Project',
           component: Project,
-          flag: '我的项目'
+          flag: '我的项目',
+          meta: { requiresAuth: true }
         },
         {
           path: '/doc/:block?',
           name: 'Doc',
-          component: Doc
+          component: Doc,
+          meta: { requiresAuth: false }
         },
         {
           path: '/code',
           name: 'Code',
-          component: Code
+          component: Code,
+          meta: { requiresAuth: true }
         }
       ]
     },
@@ -49,3 +53,13 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth) {
+    console.log(to, from)
+  } else {
+    next()
+  }
+})
+
+export default router
