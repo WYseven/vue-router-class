@@ -14,9 +14,12 @@
     },
     beforeRouteEnter (to, from, next) {
       next(vm => {
-        vm.$router.push({
-          path: '/login'
-        })
+        console.log(localStorage.getItem('token'))
+        if (localStorage.getItem('token') !== 'true') {
+          vm.$router.push({
+            path: '/login'
+          })
+        }
       })
     }
   }

@@ -6,19 +6,19 @@
           <router-link to="/doc?install">安装</router-link>
         </li>
         <li>
-          <router-link :to="{path:'/doc',query: {id:'a'}}">介绍</router-link>
+          <router-link :to="{path:'/doc',query: {id:null}}">介绍</router-link>
         </li>
         <li>
           <router-link :to="{path:'/doc/base'}">基础</router-link>
           <ul class="nav-dropdown">
             <li>
-              <router-link to="#start">开始</router-link>
+              <router-link :to="{path:'#start'}>开始</router-link>
             </li>
             <li>
               <router-link to="#dongtai">动态路由</router-link>
             </li>
             <li>
-              <router-link to="#haha">嵌套路由</router-link>
+              <router-link to="#haxiqiantao">嵌套路由</router-link>
             </li>
           </ul>
         </li>

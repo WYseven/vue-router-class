@@ -11,6 +11,16 @@
     name: 'Code',
     data () {
       return {}
+    },
+    beforeRouteEnter (to, from, next) {
+      next(vm => {
+        console.log(localStorage.getItem('token'))
+        if (localStorage.getItem('token') !== 'true') {
+          vm.$router.push({
+            path: '/login'
+          })
+        }
+      })
     }
   }
 </script>

@@ -19,6 +19,8 @@
     },
     methods: {
       sendLogin (ev) {
+        this.isLogin = true
+        localStorage.setItem('token', true)
         this.$router.go(-1)
       }
     }
