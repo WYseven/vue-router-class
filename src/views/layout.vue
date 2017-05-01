@@ -7,7 +7,7 @@
       <span>{{ flag }}</span>
     </div>
     <transition name="fade" mode="out-in">
-      <router-view></router-view>
+      <router-view class="pos"></router-view>
     </transition>
 
   </div>
@@ -54,5 +54,9 @@
 </script>
 <style>
 
+.pos {
+  position: relative;
+  top: 70px;
+}
 
 </style>

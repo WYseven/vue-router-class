@@ -1,15 +1,13 @@
 .doc {
-  position: absolute;
-  top: 103px;
-  left: 0px;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
+  position: relative;
+  top: 100px;
+  z-index: 1;
+  overflow-x: hidden;
 }
 .doc-nav {
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  top: 10px;
+  top: 100px;
   left: 0;
   bottom: 0;
   padding: 0px 0 30px 60px;
@@ -17,9 +15,7 @@
   margin-right: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #f9f9f9;
-  font-size: 16px;
-  border-right: 1px solid #11b95c;
+  background: #fff;
 }
 
 .doc-nav .main-menu {
@@ -46,7 +42,7 @@
 .doc-view {
   position: relative;
   padding: 2.2em 0;
-  margin-left: 290px;
-  max-width: 600px;
-
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-y: scroll;
 }

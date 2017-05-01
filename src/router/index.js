@@ -15,6 +15,16 @@ Vue.use(Router)
 
 let router = new Router({
   linkActiveClass: 'is-active',
+  mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    /* if (savedPosition) {
+      return savedPosition
+    } else if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    } */
+  },
   routes: [
     {
       path: '/',
