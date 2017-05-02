@@ -5,7 +5,7 @@
     </h2>
     <hr/>
     <h3>
-      <a  id="start" href="#dongtai">开始</a>
+      <a  id="start" href="#start">开始</a>
     </h3>
     <div>
       开始相关的内容
@@ -17,7 +17,7 @@
       动态路由相关的内容
     </div>
     <h3>
-      <a id="qiantaoluyou" href="#dongtai">嵌套路由</a>
+      <a id="qiantaoluyou" href="#qiantaoluyou">嵌套路由</a>
     </h3>
     <div>
       嵌套路由相关的内容
@@ -63,7 +63,7 @@ h3 {
   margin-top: 20px;  
 }
 h2 a,h3 a {
-  padding-top: 100px;
+  padding-top: 10px;
   position: relative;
 }
 </style>

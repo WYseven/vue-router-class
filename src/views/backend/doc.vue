@@ -44,6 +44,9 @@
 
 <script>
   import DocView from '@/views/backend/doc-view'
+  import TWEEN from 'tween.js'
+
+  console.log(TWEEN)
 
   export default {
     name: 'Doc',
@@ -54,36 +57,42 @@
       DocView
     },
     beforeRouteEnter (to, from, next) {
-      next(() => {
-        if (to.hash) {
-          var el = document.getElementById(to.hash.slice(1))
-          console.log(el)
-          console.log(to.hash)
-          if (el) {
-            console.log(el.offsetTop)
-            setTimeout(function () {
-              document.body.scrollTop = el.offsetTop
-            }, 0)
-            window.onscroll = function () {
-              console.log(123)
-              return false
-            }
-          }
-        }
+      next((vm) => {
+        vm.animate(to)
       })
     },
     beforeRouteUpdate (to, from, next) {
-      if (to.hash) {
-        var el = document.getElementById(to.hash.slice(1))
-        if (el) {
-          document.body.scrollTop = el.offsetTop
-        }
-      }
+      this.animate(to)
       next()
     },
     beforeRouteLeave (to, from, next) {
       console.log(to, from)
       next()
+    },
+    methods: {
+      animate (to) {
+        function animate (time) {
+          requestAnimationFrame(animate)
+          TWEEN.update(time)
+        }
+        if (to.hash) {
+          var el = document.getElementById(to.hash.slice(1))
+          if (el) {
+            animate()
+            new TWEEN.Tween({ tweeningNumber: document.body.scrollTop })
+              .easing(TWEEN.Easing.Quadratic.Out)
+              .to({ tweeningNumber: el.offsetTop }, 500)
+              .onUpdate(function () {
+                document.body.scrollTop = this.tweeningNumber.toFixed(0)
+              })
+              .start()
+            window.onscroll = function (ev) {
+              ev.preventDefault()
+              return false
+            }
+          }
+        }
+      }
     }
   }
 </script>
