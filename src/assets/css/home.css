@@ -1,6 +1,44 @@
+html,body {
+  width: 100%;
+  height:100%;
+}
+#app {
+  width: 100%;
+  height:100%;
+}
 .main {
   width: 100%;
   height:100%;
+}
+.home-header {
+  width: 80%;
+  margin: 20px auto;
+}
+.portrait {
+  float: right;
+}
+
+.portrait span{
+    color: #fff;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: #1f2d3d;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    top: 12px;
+}
+
+.portrait img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.btns {
   text-align: center;
 }
 .btns div {
