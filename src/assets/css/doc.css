@@ -1,6 +1,7 @@
 .doc {
-  position: relative;
+  position: fixed;
   top: 100px;
+  left: 280px;
   z-index: 1;
   overflow-x: hidden;
 }

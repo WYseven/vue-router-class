@@ -3,8 +3,8 @@
     <div class="home-header">
       <img src="../assets/miaov.png" alt="">
       <div class="portrait">
-        <span>登录/注册</span>
-        <img src="../assets/portrait.png" alt="">
+        <router-link  v-if="!isLogin" to="/login" tag="span">登录/注册</router-link>
+        <img  v-if="isLogin" src="../assets/portrait.png" alt="">
       </div>
     </div>
     <div class="btns">
@@ -18,7 +18,9 @@
   export default {
     name: 'home',
     data () {
-      return {}
+      return {
+        isLogin: false
+      }
     }
   }
 </script>
