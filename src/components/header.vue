@@ -3,11 +3,11 @@
     <router-link to="/" class="el-menu-item logo" exact tag="li">
       <img src="../assets/miaov.png">
     </router-link>
-    <router-link to="/project" class="el-menu-item" append tag="li">
+    <router-link to="/project" class="el-menu-item" tag="li" >
       <i class="fa fa-home"></i>
       我的项目
     </router-link>
-    <router-link to="/code" class="el-menu-item" tag="li">
+    <router-link :to='{name:"Code"}' class="el-menu-item"  tag="li">
       <i class="fa fa-code"></i>
       工作台
     </router-link>

@@ -83,6 +83,7 @@
               .easing(TWEEN.Easing.Quadratic.Out)
               .to({ tweeningNumber: el.offsetTop }, 500)
               .onUpdate(function () {
+                console.log(this.tweeningNumber.toFixed(0))
                 document.body.scrollTop = this.tweeningNumber.toFixed(0)
               })
               .start()

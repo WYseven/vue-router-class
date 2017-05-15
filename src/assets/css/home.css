@@ -38,6 +38,13 @@ html,body {
     margin-right: 10px;
     cursor: pointer;
 }
+
+.phrase {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
 .btns {
   text-align: center;
 }
@@ -59,10 +66,7 @@ html,body {
   border-color: #13ce66;
 }
 .trans {
-  -o-transition: all .3s ease,.3s ease;
-  -ms-transition: all .3s ease,.3s ease;
-  -moz-transition: all .3s ease,.3s ease;
-  -webkit-transition: all .3s ease,.3s ease;
+  transition: all .3s ease,.3s ease;
 }
 
 .fade-enter-active, .fade-leave-active {

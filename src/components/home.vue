@@ -7,6 +7,9 @@
         <img  v-if="isLogin" src="../assets/portrait.png" alt="">
       </div>
     </div>
+    <div class="phrase">
+      欢迎一起学习Vue-router
+    </div>
     <div class="btns">
       <router-link to="/project" tag="div" class=" trans">我的项目</router-link>
       <router-link to="/doc" tag="div" class=" trans">我的文档</router-link>

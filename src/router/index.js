@@ -15,6 +15,7 @@ Vue.use(Router)
 
 let router = new Router({
   linkActiveClass: 'is-active',
+  // base: 'src/a/b',
   mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     /* if (savedPosition) {
@@ -41,6 +42,7 @@ let router = new Router({
           path: '/project',
           name: 'Project',
           component: Project,
+          alias: '/c',
           meta: { requiresAuth: true },
           beforeEnter (to, from, next) {
             next()
@@ -53,10 +55,15 @@ let router = new Router({
           meta: { requiresAuth: false }
         },
         {
-          path: '/code',
+          path: 'code',
           name: 'Code',
           component: Code,
+          alias: '/b',
           meta: { requiresAuth: true }
+        },
+        {
+          path: ':id',
+          redirect: '/project'
         }
       ]
     },
