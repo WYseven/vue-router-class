@@ -4,7 +4,7 @@
     <div class="breadcrumb">
       <a href="javascript:;" @click="goHomeHandle">首页</a>
       /
-      <span>{{ flag }}</span>
+      <span :style="{color:'#97a8be'}">{{ flag }}</span>
     </div>
     <transition name="fade" mode="out-in">
       <router-view class="pos"></router-view>
@@ -18,7 +18,7 @@
 
   /*
   * in-out: 新元素先进行过渡，完成之后当前元素过渡离开。
-   out-in: 当前元素先进行过渡，完成之后新元素过渡进入。
+    out-in: 当前元素先进行过渡，完成之后新元素过渡进入。
   * */
 
   let flags = {

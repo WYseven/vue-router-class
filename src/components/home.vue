@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="phrase">
-      欢迎一起学习Vue-router
+      一起学习Vue-router
     </div>
     <div class="btns">
       <router-link to="/project" tag="div" class=" trans">我的项目</router-link>
@@ -22,7 +22,7 @@
     name: 'home',
     data () {
       return {
-        isLogin: false
+        isLogin: localStorage.getItem('token') === 'true'
       }
     }
   }

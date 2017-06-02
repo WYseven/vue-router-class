@@ -27,22 +27,22 @@
     </h2>
     <hr/>
     <h3>
-      <a  id="jinjie1" href="#jinjie1">进阶1</a>
+      <a  id="jinjie1" href="#jinjie1">导航钩子</a>
     </h3>
     <div>
-      开始相关的内容
+     导航钩子相关的内容
     </div>
     <h3>
-      <a  id="jinjie2" href="#jinjie2">进阶2</a>
+      <a  id="jinjie2" href="#jinjie2">路由元信息</a>
     </h3>
     <div>
-      动态路由相关的内容
+      路由元信息相关的内容
     </div>
     <h3>
-      <a  id="jinjie3" href="#jinjie3">进阶3</a>
+      <a  id="jinjie3" href="#jinjie3">过渡动效</a>
     </h3>
     <div>
-      嵌套路由相关的内容
+     过渡动效相关的内容
     </div>
   </div>
 </template>

@@ -2,8 +2,10 @@
   position: fixed;
   top: 100px;
   left: 280px;
+  right: 0;
+  bottom: 0;
   z-index: 1;
-  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .doc-nav {
   position: fixed;
@@ -43,6 +45,4 @@
 .doc-view {
   position: relative;
   padding: 2.2em 0;
-  max-width: 800px;
-  margin: 0 auto;
 }

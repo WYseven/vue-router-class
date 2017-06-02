@@ -1,10 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
-import Project from '@/views/backend/project'
-import Doc from '@/views/backend/doc'
-import Code from '@/views/backend/code'
+// import Project from '@/views/backend/project'
+// import Doc from '@/views/backend/doc'
+// import Code from '@/views/backend/code'
 import Login from '@/components/login'
+
+// import Project from '@/views/backend/project'
+
+/* let Project = () => import('@/views/backend/project')
+
+let Code = (r) => {
+  return import('@/views/backend/code')
+} */
+
+let Project = (r) => {
+  return require.ensure([], () => {
+    return r(require('@/views/backend/project'))
+  }, 'abc')
+}
+
+let Code = (r) => {
+  return require.ensure([], () => {
+    return r(require('@/views/backend/code'))
+  }, 'abc')
+}
+
+let Doc = (r) => {
+  return require.ensure([], () => {
+    return r(require('@/views/backend/doc'))
+  })
+}
 
 import Layout from '@/views/layout'
 
@@ -15,7 +41,7 @@ Vue.use(Router)
 
 let router = new Router({
   linkActiveClass: 'is-active',
-  // base: 'src/a/b',
+  base: __dirname,
   mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     /* if (savedPosition) {
@@ -55,7 +81,7 @@ let router = new Router({
           meta: { requiresAuth: false }
         },
         {
-          path: 'code',
+          path: '/code',
           name: 'Code',
           component: Code,
           alias: '/b',
@@ -71,10 +97,6 @@ let router = new Router({
       path: '/login',
       name: 'Login',
       component: Login
-    },
-    {
-      path: '*',
-      redirect: '/'
     }
   ]
 })
