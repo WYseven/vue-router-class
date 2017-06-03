@@ -34,6 +34,9 @@ let Doc = (r) => {
 
 import Layout from '@/views/layout'
 
+import increment from '@/views/backend/increment'
+import todolist from '@/views/backend/todolist'
+
 // 参考 https://www.easy-mock.com/
 
 Vue.use(Router)
@@ -57,6 +60,16 @@ let router = new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/increment',
+      name: 'Increment',
+      component: increment
+    },
+    {
+      path: '/todolist',
+      name: 'todolist',
+      component: todolist
     },
     {
       path: '/manage',
