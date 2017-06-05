@@ -7,10 +7,8 @@
       <span :style="{color:'#97a8be'}">{{ flag }}</span>
     </div>
     <transition name="fade" mode="out-in">
-      <router-view class="pos"></router-view>
+      <router-view></router-view>
     </transition>
-    
-
   </div>
 </template>
 
