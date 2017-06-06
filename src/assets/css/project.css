@@ -18,11 +18,11 @@
   vertical-align: middle;
 }
 
-.content-box {
-  position: relative;
-  top: 80px;
-  padding: 0px 15px;
+.content-main {
+  overflow: hidden;
 }
+
+
 
 .block-content {
   width:300px;
@@ -43,9 +43,7 @@
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
-  position: relative;
-  top: 70px;
-  margin: 0px auto;
+  margin: 20px auto;
   text-align: center;
   line-height: 48px;
   box-shadow: 0 0 2px rgba(0,0,0,.2);
@@ -55,4 +53,23 @@
 .add-project-box:hover {
   cursor: pointer;
   background: #eff2f7;
+}
+
+#page-group {
+  overflow: hidden;
+}
+
+.grid-content {
+  width: 300px;
+  margin: 0px 10px;
+  float: left;
+}
+
+.grid-content .remove {
+  opacity: 0;
+  transition: .5s;
+}
+
+.grid-content:hover .remove {
+  opacity: 1;
 }
