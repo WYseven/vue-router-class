@@ -15,14 +15,6 @@
       <i class="fa fa-book"></i>
       文档
     </router-link>
-    <router-link to="/increment" class="el-menu-item" tag="li">
-      <i class="fa fa-book"></i>
-      计数
-    </router-link>
-    <router-link to="/todolist" class="el-menu-item" tag="li">
-      <i class="fa fa-book"></i>
-      todolist
-    </router-link>
   </ul>
 </template>
 

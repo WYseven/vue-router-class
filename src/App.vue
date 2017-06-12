@@ -8,6 +8,11 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  created () {
+    this.$http.get('/api/4/news/latest').then((data) => {
+      console.log(data.data)
+    })
+  }
 }
 </script>

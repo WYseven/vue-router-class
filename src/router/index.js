@@ -1,41 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home'
-// import Project from '@/views/backend/project'
-// import Doc from '@/views/backend/doc'
-// import Code from '@/views/backend/code'
+import Project from '@/views/backend/project'
+import Doc from '@/views/backend/doc'
+import Code from '@/views/backend/code'
 import Login from '@/components/login'
 
-// import Project from '@/views/backend/project'
-
-/* let Project = () => import('@/views/backend/project')
-
-let Code = (r) => {
-  return import('@/views/backend/code')
-} */
-
-let Project = (r) => {
-  return require.ensure([], () => {
-    return r(require('@/views/backend/project'))
-  }, 'abc')
-}
-
-let Code = (r) => {
-  return require.ensure([], () => {
-    return r(require('@/views/backend/code'))
-  }, 'abc')
-}
-
-let Doc = (r) => {
-  return require.ensure([], () => {
-    return r(require('@/views/backend/doc'))
-  })
-}
-
 import Layout from '@/views/layout'
-
-import increment from '@/views/backend/increment'
-import todolist from '@/views/backend/todolist'
 
 // 参考 https://www.easy-mock.com/
 
@@ -44,7 +15,7 @@ Vue.use(Router)
 
 let router = new Router({
   linkActiveClass: 'is-active',
-  base: __dirname,
+  base: '/dist/',
   mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     /* if (savedPosition) {
@@ -60,16 +31,6 @@ let router = new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/increment',
-      name: 'Increment',
-      component: increment
-    },
-    {
-      path: '/todolist',
-      name: 'todolist',
-      component: todolist
     },
     {
       path: '/manage',
